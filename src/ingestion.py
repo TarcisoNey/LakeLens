@@ -1,0 +1,1 @@
+# Pipeline de chunking e embeddings (Dia 07)
