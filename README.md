@@ -14,8 +14,8 @@ Desenvolver um assistente baseado em RAG (Retrieval-Augmented Generation) para r
 As respostas serão geradas com base nos documentos selecionados, com indicação da fonte e da página utilizada.
 
 # Documentos
-1. PATRIKAR, Apoorva; GANTARAM, Santosh. *Best Practices for Designing and Implementing Modern Data-Centric Architecture Use Cases*. AWS Prescriptive Guidance, 2023.
+1. PATRIKAR, Apoorva; GANTARAM, Santosh. **Best Practices for Designing and Implementing Modern Data-Centric Architecture Use Cases**. AWS Prescriptive Guidance, 2023.
 
-2. ARMBRUST, Michael. *Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics*. CIDR, 2021.
+2. ARMBRUST, Michael. **Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics**. CIDR, 2021.
 
-3. ARMBRUST, Michael. *Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores*. PVLDB, 2020.
+3. ARMBRUST, Michael. **Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores**. PVLDB, 2020.
