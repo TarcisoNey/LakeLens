@@ -88,3 +88,20 @@ As respostas serão geradas com base nos documentos selecionados, com indicaçã
 ```bash
    deactivate
 ```
+
+# Escala Definida do Trio:
+
+## Dia 07 (Ingestão, Chunking & ChromaDB):
+Piloto: Integrante A (digita e constrói src/ingestion.py).
+Copilotos: Integrantes B e C (validam a extração de páginas do PDF, conferem a integridade dos metadados e analisam o tamanho dos chunks).
+
+## Dia 08 (RAG Engine & Grounding Anti-Alucinação):
+Piloto: Integrante B (digita e constrói src/rag_engine.py).
+Copilotos: Integrantes A e C (elaboram perguntas de teste de stress, cenários fora de escopo e tentam quebrar o guardrail anti-alucinação).
+
+## Dia 09 (Interface Streamlit & Polimento):
+Piloto: Integrante C (digita e constrói src/app.py).
+Copilotos: Integrantes A e B (testam a usabilidade do chat, verificam a sidebar de explicabilidade e estruturam o roteiro do pitch).
+
+## Dia 10 (Demo Day):
+Trio Completo: Todos os 3 integrantes apresentam juntos diante da banca avaliadora da DataLakers, dividindo a fala técnica, a demonstração ao vivo e as respostas no Q&A.
