@@ -1,4 +1,4 @@
-# AskData
+# AskData - LakeLens
 Projeto do grupo de estudos da IA Data Lakers + Navi.
 
 **Integrantes:**
