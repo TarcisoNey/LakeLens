@@ -84,7 +84,25 @@ As respostas serão geradas com base nos documentos selecionados, com indicaçã
    python check_setup.py
 ```
 
-7. Quando terminar, saia do ambiente virtual:
+7. Indexe os documentos da pasta `data/` no ChromaDB (só na primeira vez; é retomável se a cota da API estourar):
+```bash
+   python3 -m src.ingestion
+```
+
+8. Abra a interface web do AskData:
+```bash
+   streamlit run src/app.py
+```
+
+   Funcionalidades: chat com histórico, fontes e chunks recuperados com página e similaridade (explicabilidade), controle de Top-K, perguntas frequentes, tempo de resposta, badge de confiança e exportação do histórico em JSON.
+
+   Opcionais:
+```bash
+   python3 src/rag_engine.py    # teste do motor RAG no terminal
+   python3 avaliar_rag.py       # placar anti-alucinacao (8 perguntas)
+```
+
+9. Quando terminar, saia do ambiente virtual:
 ```bash
    deactivate
 ```
@@ -92,16 +110,16 @@ As respostas serão geradas com base nos documentos selecionados, com indicaçã
 # Escala Definida do Trio:
 
 ## Dia 07 (Ingestão, Chunking & ChromaDB):
-Piloto: Integrante A (digita e constrói src/ingestion.py).
-Copilotos: Integrantes B e C (validam a extração de páginas do PDF, conferem a integridade dos metadados e analisam o tamanho dos chunks).
+Piloto: Tarciso (digita e constrói src/ingestion.py).
+Copilotos: Ana (validam a extração de páginas do PDF, conferem a integridade dos metadados e analisam o tamanho dos chunks).
 
 ## Dia 08 (RAG Engine & Grounding Anti-Alucinação):
-Piloto: Integrante B (digita e constrói src/rag_engine.py).
-Copilotos: Integrantes A e C (elaboram perguntas de teste de stress, cenários fora de escopo e tentam quebrar o guardrail anti-alucinação).
+Piloto: Ana (digita e constrói src/rag_engine.py).
+Copilotos: Tarciso (elaboram perguntas de teste de stress, cenários fora de escopo e tentam quebrar o guardrail anti-alucinação).
 
 ## Dia 09 (Interface Streamlit & Polimento):
-Piloto: Integrante C (digita e constrói src/app.py).
-Copilotos: Integrantes A e B (testam a usabilidade do chat, verificam a sidebar de explicabilidade e estruturam o roteiro do pitch).
+Piloto: Tarciso (digita e constrói src/app.py).
+Copilotos: Ana (testam a usabilidade do chat, verificam a sidebar de explicabilidade e estruturam o roteiro do pitch).
 
 ## Dia 10 (Demo Day):
 Trio Completo: Todos os 3 integrantes apresentam juntos diante da banca avaliadora da DataLakers, dividindo a fala técnica, a demonstração ao vivo e as respostas no Q&A.

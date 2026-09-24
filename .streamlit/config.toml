@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------------------
+# Cores do LakeLens. Edite, salve e recarregue a pagina (tecla R ou F5).
+# ---------------------------------------------------------------------------
+[theme]
+base = "dark"
+primaryColor = "#ff0000"            # destaque nativo do Streamlit (foco do campo de chat, etc.)
+backgroundColor = "#000001"         # fundo da area principal
+secondaryBackgroundColor = "#0B1220"  # campo de chat e blocos
+textColor = "#E6EDF7"               # texto geral
+linkColor = "#a431e2"               # cor dos TITULOS e links da area principal
+font = "sans serif"
+codeTextColor = "#37418C"          # texto de codigo (nomes de arquivo, `assim`)
+
+# Paleta do app, nesta ordem (o app le esta lista):
+#   1a = botoes da sidebar e fundo dos baloes do chat
+#   2a = so aparece no degrade da barra sob o titulo
+#   3a = bordas dos botoes e barra lateral dos baloes
+#   4a = fundo das caixas de fonte
+#   5a = hover dos botoes, borda das caixas de fonte e fim da barra do titulo
+# (a barra sob o titulo usa as 5 cores em degrade)
+chartCategoricalColors = ["#64378C", "#48378C", "#80378C", "#37418C", "#8C376F"]
+
+# Barra lateral (tudo dela fica aqui). Fica por ultimo porque [theme.sidebar] abre uma subsecao.
+[theme.sidebar]
+backgroundColor = "#252525"         # fundo da barra lateral
+textColor = "#FFFFFF"               # texto da barra lateral
+linkColor = "rgb(130, 0, 200)"               # cor dos TITULOS da barra lateral
+primaryColor = "#80378C"            # destaque da barra lateral (slider: bolinha e trilha)
+codeTextColor = "#E6C8F0"            # texto de codigo da barra lateral

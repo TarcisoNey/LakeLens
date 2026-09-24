@@ -59,14 +59,15 @@ class RAGEngine:
         ultimo_erro = None
         for modelo in [MODELO_FLASH, *MODELOS_FALLBACK]:
             try:
-                response = self._com_retry(lambda: self.client.models.generate_content(
+                # Sem retry no mesmo modelo: se estiver sobrecarregado, o proximo assume na hora
+                response = self.client.models.generate_content(
                     model=modelo,
                     contents=prompt,
                     config=types.GenerateContentConfig(
                         system_instruction=system_instruction,
                         temperature=0.1
                     )
-                ))
+                )
                 return response.text.strip()
             except (ClientError, ServerError) as e:
                 if e.code not in (404, 429, 503):
@@ -119,7 +120,7 @@ class RAGEngine:
 
         # 3. System Instruction blindado contra alucinações
         system_instruction = """
-Você é o 'AskData', um assistente corporativo de inteligência artificial da DataLakers.
+Você é o 'LakeLens  ', um assistente corporativo de inteligência artificial da DataLakers.
 Sua missão é responder à pergunta do usuário de forma clara, profissional e EXCLUSIVAMENTE baseada nos trechos de documentos fornecidos no contexto.
 
 REGRAS OBRIGATÓRIAS:
